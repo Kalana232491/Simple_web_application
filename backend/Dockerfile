@@ -1,6 +1,3 @@
-FROM ubuntu:latest
-LABEL authors="Kalana"
-
 FROM openjdk:17-jdk-slim AS build
 
 WORKDIR /app
