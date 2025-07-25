@@ -1,4 +1,4 @@
-# To-Do Application
+# Simple Web Application
 A full-stack to-do application with MySQL, Spring Boot, and React (Vite).
 
 ## Features
