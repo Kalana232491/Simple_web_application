@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8.0
-    container_name: todo-mysql
+    container_name: web-mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: webapp
@@ -15,7 +15,7 @@ services:
       - mysql_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - todo-network
+      - web-network
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 20s
@@ -56,5 +56,5 @@ volumes:
   mysql_data:
 
 networks:
-  todo-network:
+  web-network:
     driver: bridge
